@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Roboto+Condensed:ital,wght@0,300;0,700;1,700&display=swap');
+/********************************************************
+ * TABLE OF CONTENTS
+ * =================
+ * 1. GENERAL
+ * 2. LAYOUT
+ * 3. MENU
+ * 4. MAIN
+ * -- 4a. Articles
+ * -- 4b. Gallery
+ * 5. MEDIA QUERIES
+ */
+
+/* 1. GENERAL */
+:root {
+    --main-color: #28262C;
+    --main-accent: #DACC3E;
+    --second-accent: #8BBF9F;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.25em;
+    color: var(--main-color);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+a {
+    color: var(--main-accent);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+#main section {
+    padding: 4em 1em;
+}
+
+/* 2. LAYOUT */
+#header,
+#main,
+#footer {
+    border: 1px solid #000;
+}
+
+#header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: var(--main-color);
+    font-family: "Roboto Condensed", sans-serif;
+    font-style: italic;
+    font-weight: 700;
+}
+
+#header a {
+    text-decoration: none;
+    color: var(--main-accent);
+}
+
+#header a:hover {
+    color: var(--second-accent);
+}
+
+#site-name {
+    text-transform: uppercase;
+}
+
+#footer {
+    text-align: center;
+    background-color: var(--main-color);
+    color: var(--main-accent);
+    padding: 1em;
+}
+
+#copyright {
+    font-size: 0.7em;
+}
+
+/* 3. MENU */
+#main-menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+#main-menu li {
+    display: inline-block;
+    margin-right: 2em;
+    font-style: normal;
+    font-weight: 300;
+}
+
+/* 4. MAIN */
+.content {
+    text-align: center;
+    background-color: var(--second-accent);
+}
+
+#btn {
+    scale: 1.5;
+    background-color: var(--main-color);
+}
+
+
+
+#btn a {
+    text-decoration: none;
+}
+
+#btn :hover {
+    color: var(--second-accent)
+}
+
+#heroimg {
+    height: 60vh;
+    width: 65vw;
+    object-fit: cover;
+}
+
+#homepage {
+    margin-top: 0;
+}
+
+#btmp {
+    margin-bottom: 0;
+    padding-bottom: 15px;
+}
+
+.feature {
+    padding: 4em 2em;
+    background-color: var(--second-accent);
+    color: var(--main-color);
+}
+
+/* -- 4a. Articles */
+.articles-container {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 700px;
+    margin: 0 auto;
+    /* center */
+}
+
+.article {
+    flex: 1 0 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/*Shop*/
+.shoptitle {
+    padding-top: 10px;
+}
+
+
+/* -- 4b. Gallery */
+#gallery {
+    background-color: var(--second-accent);
+}
+
+.gallery-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 50px auto;
+    margin-bottom: 0;
+    /* center the container */
+}
+
+.item {
+    height: 355px;
+    /* width: 35vw; */
+    background-color: #aaa;
+    color: #000;
+    text-align: center;
+    flex: 0 0 25%;
+    border: 5px solid var(--main-color);
+}
+
+.galimg {
+    /* height: 250px; */
+    width: 250px;
+    object-fit: cover;
+}
+
+/* .item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 2em;
+} */
+
+.buynowbtn {
+    /* background-color: #ffec51; */
+
+    background-color: var(--main-color);
+    /* Green  */
+    border: 2px solid black;
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.buynowbtn:hover {
+    transition: .2s;
+    scale: 1.1;
+    color: var(--main-accent);
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* About */
+.abouttitle h2 {
+    margin-left: 10em;
+}
+
+.flexcontainer {
+    display: flex;
+}
+
+.aboutwords {
+    margin: 25px;
+}
+
+.aboutimg {
+    width: 45vw;
+    object-fit: contain;
+}
+
+/* 5. MEDIA QUERIES */
+@media screen and (max-width:768px) {
+    .article.article3 {
+        width: 100%;
+        flex-basis: 100%;
+    }
+
+    .item {
+        flex: 0 0 50%;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width:480px) {
+    #main-menu li {
+        display: block;
+    }
+
+    .articles-container {
+        flex-direction: column;
+    }
+
+}

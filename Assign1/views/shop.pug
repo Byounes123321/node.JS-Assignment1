@@ -1,0 +1,20 @@
+extends layout 
+
+block layout-content 
+    .content 
+
+        div#gallery   
+            h2.shoptitle Shop
+            div.gallery-container
+                each shoe in shoeBox 
+                    div.item
+                        div.galimg
+                            img(src="/img/" + shoe.img)
+                        p #{shoe.name}
+                        p #{shoe.brand}
+                        p $#{shoe.price}
+                        a.buynowbtn(href='#')  Buy now!
+                   
+                    <br> <br>
+
+
