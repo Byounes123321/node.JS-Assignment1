@@ -1,2 +1,3 @@
 # node.JS-Assignment1
-My sssignment to make a website using node.js and mongodb
+Create a website using node and mongodb
+I created a online shoe store that will sell some shoes that I like
