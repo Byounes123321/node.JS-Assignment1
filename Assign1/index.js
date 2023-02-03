@@ -1,11 +1,23 @@
+//include environment variables
+require('dotenv').config();
+
 // import the required modules 
 const express = require('express');
 const path = require("path");
 const { MongoClient } = require("mongodb");
+const { env } = require('process');
+
+
+const dbUserN = process.env.DB_USERNAME;
+const dbPwd = process.env.DB_PASSWORD;
+
+console.log("Username: ", dbUserN);
+console.log("Password: ", dbPwd);
 
 
 // establish connection to the database
-const dbURl = "mongodb://127.0.0.1:27017/shoesdb";
+//const dbURl = "mongodb://127.0.0.1:27017/shoesdb";
+const dbURl = "mongodb+srv://" + dbUserN + ":" + dbPwd + "@cluster0.zk1zutr.mongodb.net/Shoesdb?retryWrites=true&w=majority";
 const client = new MongoClient(dbURl);
 
 
