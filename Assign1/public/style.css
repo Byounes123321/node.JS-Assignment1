@@ -1,15 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Roboto+Condensed:ital,wght@0,300;0,700;1,700&display=swap');
-/********************************************************
- * TABLE OF CONTENTS
- * =================
- * 1. GENERAL
- * 2. LAYOUT
- * 3. MENU
- * 4. MAIN
- * -- 4a. Articles
- * -- 4b. Gallery
- * 5. MEDIA QUERIES
- */
 
 /* 1. GENERAL */
 :root {
@@ -52,10 +41,6 @@ a {
 
 a:hover {
     text-decoration: none;
-}
-
-#main section {
-    padding: 4em 1em;
 }
 
 /* 2. LAYOUT */
@@ -152,24 +137,7 @@ a:hover {
     padding-bottom: 15px;
 }
 
-.feature {
-    padding: 4em 2em;
-    background-color: var(--second-accent);
-    color: var(--main-color);
-}
 
-/* -- 4a. Articles */
-.articles-container {
-    display: flex;
-    flex-flow: row wrap;
-    max-width: 700px;
-    margin: 0 auto;
-    /* center */
-}
-
-.article {
-    flex: 1 0 0;
-}
 
 img {
     width: 100%;
@@ -214,18 +182,11 @@ img {
     object-fit: cover;
 }
 
-/* .item a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    padding: 2em;
-} */
 
 .buynowbtn {
     /* background-color: #ffec51; */
 
     background-color: var(--main-color);
-    /* Green  */
     border: 2px solid black;
     color: white;
     padding: 5px 5px;
@@ -241,9 +202,6 @@ img {
     color: var(--main-accent);
 }
 
-.menu-toggle {
-    display: none;
-}
 
 /* About */
 .abouttitle h2 {
@@ -263,12 +221,8 @@ img {
     object-fit: contain;
 }
 
-/* 5. MEDIA QUERIES */
+/* 5. MEDIA QUERIES*/
 @media screen and (max-width:768px) {
-    .article.article3 {
-        width: 100%;
-        flex-basis: 100%;
-    }
 
     .item {
         flex: 0 0 50%;
@@ -276,13 +230,3 @@ img {
     }
 }
 
-@media screen and (max-width:480px) {
-    #main-menu li {
-        display: block;
-    }
-
-    .articles-container {
-        flex-direction: column;
-    }
-
-}

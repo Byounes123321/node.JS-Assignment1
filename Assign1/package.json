@@ -9,6 +9,7 @@
   "author": "Bassil Younes",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "jade-bootstrap": "^1.0.14",
     "mongodb": "^5.0.0",
